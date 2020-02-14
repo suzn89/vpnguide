@@ -452,7 +452,8 @@ body {
     font-size: 14px;
   }
   .subContent .box img {
-    margin: 8px 0 20px 0;
+    display: block;
+    margin: 8px auto 20px;
   }
   .btnArea a {
     display: inline-block;
