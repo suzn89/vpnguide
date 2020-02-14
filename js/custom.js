@@ -1,11 +1,10 @@
 $(function() {
-  var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ? true : false;
+  if(navigator.userAgent.match(/Android|Mobile|iP(hone|od|ad)|BlackBerry|IEMobile|Kindle|NetFront|Silk-Accelerated|(hpw|web)OS|Fennec|Minimo|Opera M(obi|ini)|Blazer|Dolfin|Dolphin|Skyfire|Zune/)){
 
-
-  if(!isMobile) {
-    $('.device').attr('href','window.html');
+    $('.device').attr('href','tablet.html');
+    //모바일(스마트폰+태블릿)일 때 실행 될 스크립트
+  
   }
-
   $('.menubtn').click(function() {
     $(this).toggleClass('close');
     $('.nav').toggleClass('open');
