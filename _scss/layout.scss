@@ -72,6 +72,9 @@ body {
           margin: 35px auto 25px;
         }
       }
+      &.tablet {
+        display:none;
+      }
     }
   }  
 }
@@ -310,10 +313,14 @@ body {
             display: block;
             margin: 35px auto 20px;
           }
-        }
-        &:first-child {
+        }        
+        &.tablet {
+          display:block;
           width: 100%;
           margin-bottom: 10px;
+        }
+        &.pc {
+          display:none;
         }
         &:last-child {
           margin-left: 10px;

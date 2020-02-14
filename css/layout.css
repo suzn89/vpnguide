@@ -75,6 +75,10 @@ body {
   margin: 35px auto 25px;
 }
 
+.mainContent ul li.tablet {
+  display: none;
+}
+
 .wrap {
   position: relative;
   width: 1200px;
@@ -347,9 +351,13 @@ body {
     display: block;
     margin: 35px auto 20px;
   }
-  .mainContent ul li:first-child {
+  .mainContent ul li.tablet {
+    display: block;
     width: 100%;
     margin-bottom: 10px;
+  }
+  .mainContent ul li.pc {
+    display: none;
   }
   .mainContent ul li:last-child {
     margin-left: 10px;
