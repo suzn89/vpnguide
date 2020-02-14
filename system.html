@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VPN 사용가이드</title>
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500&display=swap&subset=korean" rel="stylesheet">
+  <link rel="stylesheet" href="css/default.css">  
+  <link rel="stylesheet" href="css/layout.css">  
+  <script src="js/jquery-1.12.4.js"></script>
+  <script src="js/custom.js"></script>
+</head>
+<body>
+  <div class="wrap">
+    <div class="menuSide">
+      <header class="header">
+        <h1><span>Usage Guide</span>VPN 사용가이드</h1>
+      </header>
+      <a href="#" class="menubtn"><span class="ir">메뉴</span></a>
+      <nav class="nav">  <!-- open toggle-->
+        <ul class="depth1">
+          <li><a href="#">PC버전(Windows)</a>
+            <div class="sub">
+              <ul class="depth2">
+                <li><a href="#">설치 파일 다운로드</a></li>
+                <li><a href="#">VPN 클라이언트 설치</a></li>
+                <li><a href="#">VPN 클라이언트 접속</a></li>
+                <li><a href="#">VPN 클라이언트 해제</a></li>
+              </ul>
+            </div>          
+          </li>
+          <li><a href="#">태블릿버전(Android)</a>
+            <div class="sub">
+              <ul class="depth2">
+                <li><a href="#">설치 파일 다운로드</a></li>
+                <li><a href="#">VPN 클라이언트 설치</a></li>
+                <li><a href="#">VPN 클라이언트 접속</a></li>
+                <li><a href="#">VPN 클라이언트 해제</a></li>
+              </ul>
+            </div>  
+          </li>
+          <li><a href="#">현장지휘통제시스템</a>
+            <div class="sub">
+              <ul class="depth2">
+                <li><a href="#">업무시스템 사용가이드</a></li>
+                <li><a href="#">사용자ID 생성절차</a></li>
+              </ul>
+            </div>  
+          </li>
+          <li><a href="#">화재안전특별조사</a>
+            <div class="sub">
+              <ul class="depth2">
+                <li><a href="#">업무시스템 사용가이드</a></li>
+              </ul>
+            </div>  
+          </li>
+        </ul>
+      </nav>
+      <aside class="aside">
+        <h2>현장지휘통제시스템</h2>
+        <ul>
+          <li><a href="#section1">업무시스템 사용가이드</a></li>
+          <li><a href="#section2">사용자ID 생성 절차</a></li>
+          <li><a href="#section3">공인인증서등록</a></li>
+        </ul>
+      </aside>
+    </div> <!-- menuSide -->   
+    <div class="subContent">
+      <h2>현장지휘통제시스템</span></h2>
+      <div class="box" id="section1">
+        <h3>현장지휘통제시스템 접속방법</h3>
+        <p>VPN 접속 완료 후 사용자 PC에서 Crome 브라우저 실행</p>
+        <p>현장지휘통제시스템(<a href="https://www.m119.go.kr">https://www.m119.go.kr</a>) 사이트 접속</p>
+        <p class="warning">※ 반드시 https 로 접속</p>
+        <img src="images/22-1.png" alt="현장지휘통제시스템 접속">
+
+        <p>주소창 바로 왼쪽에 (i)자 아이콘 클릭</p>
+        <p>툴팁창이 열리면 [사이트설정] 클릭</p>
+        <img src="images/22-2.png" alt="설정버튼 클릭">
+
+        <p>아래 화면과 같이 모든 항목 허용으로 변경</p>
+        <p class="warning">※ 별도로 저장하지 않아도 변경 시 자동으로 저장됨</p>
+        <img src="images/23-1.png" alt="모든항목 허용">
+
+        <p>변경사항 적용을 위해 새로고침 버튼 클릭</p>
+        <img src="images/23-2.png" alt="새로고침">
+
+        <p>사이트 새로고침이 완료되면 공인인증서 로그인을 통해 업무시스템에 로그인</p>
+        <p class="warning">※ 인증서가 등록되지 않았을 경우 인증서 등록 후 사용해야 함</p>
+        <img src="images/24-1.png" alt="로그인">
+
+      </div> <!-- box -->
+      <div class="box" id="section2">
+        <h3>사용자ID 생성 절차</h3>
+        <p>사용자관리시스템(<a href="http://sso.m119.go.kr">http://sso.m119.go.kr</a>)에접속하여 공인인증서로 로그인</p>
+        <p class="warning">※ 인터넷망에서 사용자관리시스템 접속시 SSL VPN 접속 후 사용 가능</p>
+        <p class="warning">※ 사용자관리시스템 계정이 없을 경우 소방본부 정보통신 담당자에게 사용자  등록 요청 필요</p>
+        <img src="images/25-1.png" alt="공인인증서 로그인">   
+
+        <p>우측 하단 [추가] 버튼 클릭</p>
+        <img src="images/26-1.png" alt="추가버튼클릭">   
+
+        <p>사용자등록 팝업창이 열리면 [대원찾기] 버튼을 클릭하여 등록할 사용자 선택</p>
+        <img src="images/27-1.png" alt="등록할 사용자 선택">
+
+        <p>사용할 아이디와 비밀번호를 입력</p>
+        <p class="warning">※ 희망 아이디 선택(korea.kr 메일의 아이디를 이용하면 편리함)</p>
+        <img src="images/28-1.png" alt="아이디와 비밀번호 입력">
+
+        <p>사용자 접속권한을 선택하고 저장버튼을 클릭</p>
+        <img src="images/29-1.png" alt="저장버튼클릭">
+
+
+      </div> <!-- box -->
+
+      <div class="box" id="section3">
+        <h3>공인인증서 등록</h3>
+
+        <ㅁ>크롬 브라우져 실행 후 현장지휘통제시스템(<a href="https://www.m119.go.kr">https://www.m119.go.kr</a>)에 접속</p>
+        <p>생성한 아이디 및 비밀번호 입력 후 로그인 버튼 클릭</p>
+        <p class="warning">※ 로그인 버튼을 클릭하면 공인인증서 등록 화면으로 이동</p>
+        <img src="images/30-1.png" alt="로그인">
+
+        <p>공인인증서 등록버튼을 눌러서 공인인증서 선택 화면으로 이동</p>
+        <img src="images/31-1.png" alt="공인인증서 선택">
+
+        <p>공인인증서 등록버튼을 눌러서 공인인증서 선택 화면으로 이동</p>
+        <p>공인인증서 암호 입력 후 확인 버튼 클릭하면 공인인증서 등록 완료</p>
+        <img src="images/32-1.png" alt="공인인증서 등록">
+
+        <p>소방현장통합관리시스템 메인화면에서 공인인증서 로그인 진행</p>
+        <img src="images/33-1.png" alt="공인인증서 로그인">
+      </div> <!-- box -->
+
+    </div> <!-- subContent -->
+  </div>
+</body>
+</html>

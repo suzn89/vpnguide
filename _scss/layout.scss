@@ -1,0 +1,430 @@
+@charset "utf-8";
+// Break Point (Desktop First 기준 내림차순 설정)
+$tablet-l-width		: 1024px;
+$primaryColor : #0C93FD;
+ 
+// 태블릿
+@mixin tab {
+	@media screen and (max-width: #{$tablet-l-width}) {
+		@content;
+	}
+}
+
+
+// 기본 css
+body {
+  background: #F9F9F9;
+}
+.mainHeader {
+  width: 100%;  
+  height:450px;
+  min-width: 1200px;
+  margin: 0 auto;
+  background: $primaryColor;
+  text-align: center;
+  transition:all 300ms ease-in-out;
+  h1 {
+    padding-top: 250px;
+    color: #ffffff;
+    font-size: 54px;
+    font-weight: 300;
+    transition:all 300ms ease-in-out;
+    span {
+      display: block;
+      color: #F6FFAF;
+      font-size: 32px;
+      font-weight: 500;
+    }
+  }
+}
+.mainContent {
+  width: 1200px;
+  height:450px;
+  padding-top: 75px;
+  margin: 0 auto;
+  text-align: center;
+  transition:all 300ms ease-in-out;
+  p {
+    font-size: 22px;
+    color: #878787;
+  }
+  ul {
+    margin-top: 50px;
+    li {
+      transition:all 300ms ease-in-out;
+      display: inline-block;
+      width: 200px;
+      height: 200px;
+      background: #ffffff;
+      margin: 0 10px;
+      border-bottom: 1px solid #E8E8E8;
+      a {
+        display:block;        
+        width: 100%;
+        height: 100%;
+        color: #2B2B2B;
+        font-size: 22px;
+        text-align:center;
+        letter-spacing: -1px;
+        font-weight:bold;
+        img {
+          display: block;
+          margin: 35px auto 25px;
+        }
+      }
+    }
+  }  
+}
+
+.wrap {
+  position: relative;
+  width:1200px;
+  .header {
+    margin-top: 100px;
+  }
+}
+.menuSide {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 400px;
+  height: 100%;
+  padding: 30px;
+  background: $primaryColor;
+  h1 {    
+    color: #ffffff;
+    font-size: 40px;
+    font-weight: 300;
+    letter-spacing: -1px;
+    text-align:right;    
+    span {
+      display: block;
+      color: #F6FFAF;
+      font-size: 25px;
+      font-weight: 500;
+    }
+  }
+  .nav {
+    position: absolute;
+    left: -400px;
+    top: 0;  
+    width: 400px;
+    height: 100%;
+    padding: 30px;
+    margin-top: 60px;
+    background: $primaryColor; 
+    transition:left 300ms ease-in-out;
+    .depth1 {
+      li {
+        line-height: 70px;
+        text-align:center;
+        a {
+          font-size: 21px;
+          color: #ffffff;
+          border-bottom: 1px solid #6DBEFE;
+          letter-spacing: -0.5px;
+          font-weight: 300;
+          &:hover {
+            color:#F6FFAF;
+          }
+        }
+        .sub {
+          display: none;
+        }
+      }
+    }
+  }
+  .nav.open {
+    position: absolute;
+    left: 0;
+    top: 0;       
+  }
+  .menubtn {
+    position: absolute;
+    left: 30px;
+    top: 30px;
+    z-index: 700;
+    display:inline-block;
+    width: 30px;
+    height: 30px;
+    background: url(../images/btn_menu.png) center top no-repeat;
+    &.close {
+      background: url(../images/btn_close.png) center top no-repeat;  
+    }
+  }
+  h2 {
+    margin-top: 150px;
+    margin-bottom: 15px;
+    font-size: 28px;
+    text-align:right;
+    letter-spacing: -1px;
+    color: #ffffff;
+  }
+  .aside {
+    ul li {
+      padding: 0 10px;
+      line-height: 55px;
+      border-bottom: 1px solid #6DBEFE;
+      text-align:right;
+      a {
+        font-size: 22px;
+        color: #ffffff;
+        font-weight:300;
+        &:hover {
+          color: #F6FFAF;
+        }
+      }
+    }
+  }
+}
+.subContent {
+  width:780px;
+  height: 100%;
+  margin-top: 30px;
+  margin-left: 420px; 
+  padding: 70px 30px 50px 30px; 
+  background: #ffffff;
+  h2 {
+    padding-bottom:15px;    
+    color: #484848;
+    border-bottom: 2px solid #E4E4E4;
+    font-size: 32px;
+    font-weight: 300;
+  }
+  .ptcolor {
+    color: $primaryColor;
+  }
+  .box {
+    margin-top: 50px;
+    h3 {
+      margin-bottom: 10px;
+      color: $primaryColor;
+      font-size: 21px;
+      font-weight: 500;
+    }
+    p {
+      color:#6A6A6A;
+      font-size: 18px;
+      a {
+        color: #0C38E8;
+        text-decoration: underline;
+        display: inline;
+      }
+    }
+    .refer {
+      color: #9C9C9C;
+      font-size: 16px;
+    }
+    .warning {
+      color: #E80C5E;
+      font-size: 16px;
+    }
+    img {
+      display: block;
+      border: 1px solid #EEEEEE;
+      margin:8px auto 20px;
+    }
+    .point {
+      color:$primaryColor;
+    }
+  }
+}
+.btnArea {
+  width: 100%;
+  margin-top: 20px;
+  a {
+    display: inline-block;
+    min-width: 150px;    
+    padding: 0 8px;
+    text-align:center;
+    font-size: 17px;
+    font-weight: 300;
+    &.icon {
+      padding-left: 40px;
+    }
+  }
+  .primary {
+    height: 47px;
+    line-height: 46px;
+    color: #ffffff;
+    background: $primaryColor url(../images/btn_download.png) 10px 50% no-repeat
+    ;
+  }
+  .text {
+    color: $primaryColor;
+    font-size: 16px;
+    text-decoration: underline;
+  }
+  a + a {
+    margin-left: 20px;
+  }
+}
+@include tab {
+  .mainHeader {
+    width: 100%;  
+    height:280px;
+    min-width: auto;
+    h1 {
+      padding-top: 120px;      
+      font-size: 33px;      
+      span {
+        font-size: 20px;
+      }
+    }
+  }
+  .mainContent {    
+    width: 96%;
+    height: 100%;
+    padding-top: 50px;
+    padding-bottom: 40px;
+    p {
+      font-size: 20px;
+    }
+    ul {      
+      width: 90%;
+      margin: 40px auto 0;
+      li {        
+        width:calc(50% - 10px);
+        height: 200px;
+        margin: 0;
+        a {
+          float:left;
+          img {
+            display: block;
+            margin: 35px auto 20px;
+          }
+        }
+        &:first-child {
+          width: 100%;
+          margin-bottom: 10px;
+        }
+        &:last-child {
+          margin-left: 10px;
+        }
+      }
+    }  
+  }
+  .wrap {
+    position: relative;
+    width:100%;
+    .header {
+      margin-top: 0px;
+    }
+  }
+  .menuSide {
+    overflow: hidden;
+    width: 100%;
+    height: 90px;    
+    padding: 0 30px;
+    line-height: 90px;
+    h1 {          
+      font-size: 30px;
+      text-align:center; 
+      span {
+        display: none;
+      }
+    }
+    .nav {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0%;  
+      width: 100%;
+      height: 100%;
+      padding: 30px;
+      margin-top: 60px;
+      background: $primaryColor; 
+      transition:left 300ms ease-in-out;
+      .depth1 {
+        li {
+          .sub {
+            display: none;
+            background: #0C87E8;
+            padding: 30px;            
+            li {
+              line-height: 32px;              
+              a {
+                font-size: 18px;
+                color: #ffffff;
+                text-align: left;
+                border-bottom: none;
+                &:before {
+                  content: '- ';
+                }
+              }
+            }
+          }
+        }        
+      }
+    }
+    .menubtn {
+      position: absolute;
+      left: 30px;
+      top: 30px;
+      z-index: 700;
+      display:inline-block;
+      width: 30px;
+      height: 30px;
+      background: url(../images/btn_menu.png) center top no-repeat;
+      &.close {
+        background: url(../images/btn_close.png) center top no-repeat;  
+      }
+    }
+    h2 {
+      margin-top: 150px;
+      margin-bottom: 15px;
+      font-size: 28px;
+      text-align:right;
+      letter-spacing: -1px;
+      color: #ffffff;
+    }
+    .aside {
+      display: none;      
+    }
+    &.open {
+      height: 100%;
+    }
+  }
+  .subContent {
+    width:96%;
+    height: 100%;
+    margin: 100px auto 30px; 
+    padding: 40px 20px 40px 20px;     
+    h2 {
+      font-size: 28px;      
+    }
+    .box {      
+      h3 {
+        font-size: 18px;        
+      }
+      p {        
+        font-size: 16px;
+      }
+      .refer {
+        color: #9C9C9C;
+        font-size: 14px;
+      }
+      img {        
+        margin: 8px 0 20px 0;
+      }
+    }
+  }
+  .btnArea {
+    a {
+      display: inline-block;
+      min-width: 120px;    
+      padding: 0 8px;
+      text-align:center;
+      font-size: 16px;
+      font-weight: 300;     
+    }
+    .primary {
+      height: 45px;
+      line-height: 44px;
+    }
+    .text {
+      color: $primaryColor;
+      font-size: 14px;
+    }
+  }
+}
