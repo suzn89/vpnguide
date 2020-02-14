@@ -1,10 +1,12 @@
 $(function() {
-  if(navigator.userAgent.match(/Android|Mobile|iP(hone|od|ad)|BlackBerry|IEMobile|Kindle|NetFront|Silk-Accelerated|(hpw|web)OS|Fennec|Minimo|Opera M(obi|ini)|Blazer|Dolfin|Dolphin|Skyfire|Zune/)){
-
-    $('.device').attr('href','tablet.html');
-    //모바일(스마트폰+태블릿)일 때 실행 될 스크립트
-  
+  var filter = "win16|win32|win64|mac|macintel";
+  if ( navigator.platform ) { 
+    if ( filter.indexOf( navigator.platform.toLowerCase() ) < 0 ) {
+      $('.device').attr('href','tablet.html');
+      alert('mobile 접속');
+    } 
   }
+
   $('.menubtn').click(function() {
     $(this).toggleClass('close');
     $('.nav').toggleClass('open');
