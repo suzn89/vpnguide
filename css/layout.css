@@ -127,6 +127,27 @@ body {
   text-align: center;
 }
 
+.menuSide .nav .depth1 li .sub {
+  display: none;
+  background: #0C87E8;
+  padding: 30px;
+}
+
+.menuSide .nav .depth1 li .sub li {
+  line-height: 32px;
+}
+
+.menuSide .nav .depth1 li .sub li a {
+  font-size: 18px;
+  color: #ffffff;
+  text-align: left;
+  border-bottom: none;
+}
+
+.menuSide .nav .depth1 li .sub li a:before {
+  content: '- ';
+}
+
 .menuSide .nav .depth1 li a {
   font-size: 21px;
   color: #ffffff;
